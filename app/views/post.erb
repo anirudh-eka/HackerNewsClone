@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Welcome to "Hacker News"...</h1>
+  
+  <h3><%= @post.title %></h3>
+  <h4><%= @post.article_url %></h4>
+  <h5><%= @post.user.username %></h5>
+
+  <form action="/new_comment/<%=@post.id%>" method="post">
+  <textarea name="comment_text"></textarea>
+  <input type="submit">
+  </form>
+
+  <% @comments.all.each do |comment| %>
+    <p> <%= comment.content %></p>
+    <p> <%= comment.user.username %></p>
+  <% end %>
+</div>
+

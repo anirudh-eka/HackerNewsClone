@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Welcome to "Hacker News"...</h1>
+  <% Post.all.each do |post| %>
+    <a href="<%=post.article_url%>"><p> <%= post.title %></a> (<%=post.article_url %>)</p>
+    <a href="/posts/<%=post.id%>"><p> <%= post.comments.count %> comments</p></a>
+  <% end %>
+</div>

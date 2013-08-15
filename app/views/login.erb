@@ -1,0 +1,18 @@
+<% if @error %>
+  <p><%=@error%></p>
+<% end %>
+
+<p><strong>Login</strong></p>
+  <form action='/login' method= 'post'> 
+    username: <input type ="text" name="login_name"><br>
+    password: <input type ="text" name="login_password"><br>
+    <input type ="submit" value="login">
+  </form>
+
+<p><strong>Create Account</strong></p>
+  
+  <form action='/create_account' method= 'post'> 
+    username: <input type ="text" name="create_name"><br>
+    password: <input type ="text" name="create_password"><br>
+    <input type ="submit" value="create account">
+  </form>

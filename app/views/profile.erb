@@ -1,0 +1,16 @@
+<p>user: <%= @user.username %></p>
+<p>created at: <%= @user.created_at %></p>
+<p>about: <%= @user.about %></p>
+<p>posts:</p>
+<ul>
+  <% @posts.each do |post| %>
+    <li><a href="/posts/<%=post.id%>"> <%=post.name%></a></li>
+  <% end %> 
+</ul>
+
+<p>comments:</p>
+<ul>
+  <% @comments.each do |comment| %>
+    <li><a href="/posts/<%=comment.post_id%>"> <%=comment.content%></a></li>
+  <% end %> 
+</ul>
